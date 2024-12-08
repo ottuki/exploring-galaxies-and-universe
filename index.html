@@ -1,0 +1,453 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <title>Explore The Universe</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #121212; 
+            color: #f5f5f5;
+        }
+    
+        header {
+            background: url(img/universe.jpg);
+            background-size: cover;
+            background-position: center;
+            min-height: 1000px;
+            color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+    
+        .nav-wrapper {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 10; 
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 10px 20px; 
+        }
+
+        .brand-logo {
+            margin-left: 10px; 
+        }
+
+        .right {
+            display: flex;
+            justify-content: flex-end; 
+            width: 100%; 
+        }
+
+        
+        .header-content {
+            text-align: center;
+            position: relative;
+            padding-top: 150px; 
+        }
+
+        .header-content h1 {
+            font-size: 5vw; 
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            color: #ffffff; 
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7), 
+                         0 0 25px #2a1fc9, 
+                         0 0 5px rgba(255, 255, 255, 0.5); 
+            margin: 0;
+            transition: all 1.0s ease-in-out; 
+        }
+
+       
+        .header-content h1:hover {
+            color: #3628f3; 
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7),
+                         0 0 25px rgba(8, 8, 4, 0.651),
+                         0 0 5px rgba(0, 0, 0, 0.8); 
+        }    
+    
+        @media (max-width: 992px) {
+            .header-content h1 {
+                font-size: 8vw; 
+            }
+        }
+    
+        @media (max-width: 600px) {
+            .header-content h1 {
+                font-size: 10vw; 
+            }
+        }
+
+        
+        
+h2 a {
+    color: #55b7f8; 
+    text-decoration: none;
+    font-weight: bold; 
+    transition: color 0.4s ease; 
+}
+
+h2 a:hover {
+    color: orange; 
+}
+
+
+h3 a {
+    color: #55b7f8; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: color 0.4s ease; 
+}
+
+h3 a:hover {
+    color: orange; 
+}
+
+
+
+
+        
+        .galaxy-type {
+            background-color: #444343;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .galaxy-type h5 {
+            font-size: 24px;
+        }
+
+        .galaxy-type p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #eff6f7;
+        }
+
+        
+        #spiral h5, #elliptical h5, #dwarf h5, #irregular h5, #lenticular h5, #peculiar h5 {
+            color: #55b7f8;
+        }
+
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media only screen and (max-width: 992px) {
+            
+            .header-content h1 {
+                font-size: 8vw;
+            }
+
+           
+            .sidenav li {
+                font-size: 1.2rem; 
+            }
+
+            .sidenav-trigger {
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- nav bar -->
+    <header>
+        <nav class="nav-wrapper transparent">
+            <div class="container">
+                <a href="#" class="brand-logo">Explore The Universe</a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down" >
+                    <li><a href="#galaxies">Galaxies</a></li>
+                    <li><a href="#universe">Universe</a></li>
+                    <li><a href="#types">Types</a></li>
+                    <li><a href="#stars">Stars</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-tooltip="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a></li>
+                    <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-tooltip="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a></li>
+                    <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-tooltip="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a></li>
+                </ul>
+
+                
+                <ul class="sidenav grey lighten-2" id="mobile-menu">
+                    <li><a href="#galaxies">Galaxies</a></li>
+                    <li><a href="#universe">Universe</a></li>
+                    <li><a href="#types">Types</a></li>
+                    <li><a href="#stars">Stars</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        
+        <div class="header-content">
+            <h1>BEYOND YOUR IMAGINATIONS</h1>
+            
+        </div>
+    </header>
+    
+    <!-- photo / grid -->
+    <section class="container section scrollspy" id="galaxies" style="padding-top: 20px;">
+        <div class="row" style="margin-bottom: 40px;">
+            <!-- Galaxy 1 -->
+            <div class="col s12 m4 center-align" style="padding: 10px;">
+                <img src="img/whirlpool.png" alt="Whirlpool Galaxy" class="responsive-img materialboxed">
+                <h2 class="indigo-text text-darken-2">
+                    <a href="galaxies.html?name=Messier51" target="_blank">MESSIER 51</a>
+                </h2>
+                <p>The Whirlpool Galaxy, also known as Messier 51 (M51), is a stunning spiral galaxy located about 23 million light-years away in the constellation Canes Venatici.</p>
+                <p> It is sometimes referred to as the "Rosette of the Sky" because of its beautiful and symmetrical spiral arms, reminiscent of a flower's petals.</p>
+            </div>
+
+            <!-- Galaxy 2 -->
+            <div class="col s12 m4 center-align" style="padding: 10px;">
+                <img src="img/milky.png" alt="Milky Way" class="responsive-img materialboxed">
+                <h2 class="indigo-text text-darken-2">
+                    <a href="galaxies.html?name=MilkyWay" target="_blank">MILKY WAY</a>
+                </h2>
+                <p>The Milky Way is the galaxy containing our Solar System. It appears as a faint, milky band of light across the night sky. he Milky Way is on a collision course with the Andromeda Galaxy!</p>
+                <p>In about 4.5 billion years, the Milky Way and Andromeda will collide and merge, forming a massive elliptical galaxy.</p>
+            </div>
+
+            <!-- Galaxy 3 -->
+            <div class="col s12 m4 center-align" style="padding: 10px;">
+                <img src="img/ic.png" alt="IC 1101" class="responsive-img materialboxed">
+                <h2 class="indigo-text text-darken-2">
+                    <a href="galaxies.html?name=IC1101" target="_blank">IC 1101</a>
+                </h2>
+                <p>IC 1101 serves as an example of how massive galaxies can become. It is a key object of study for understanding galaxy evolution. It spans about 6 million light-years in diameter.</p>
+                <p>It is nearly 60 times larger than the Milky Way! It's located about 1 billion light-years away from Earth in the constellation Virgo.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Galaxy 4 -->
+            <div class="col s12 m5 offset-m1 center-align" style="padding: 10px;">
+                <img src="img/mess87.png" alt="Messier 87" class="responsive-img materialboxed">
+                <h2 class="indigo-text text-darken-2">
+                    <a href="galaxies.html?name=Messier87" target="_blank">MESSIER 87</a>
+                </h2>
+                <p>M87 is home to a supermassive black hole that became famous when the first-ever image of a black hole was captured in 2019.</p>
+                <p>This black hole, located at the center of M87, has a mass around 6.5 billion times that of our Sun! The black hole is located about 53 million light-years from Earth in the Virgo Cluster.</p>
+            </div>
+
+            <!-- Galaxy 5 -->
+            <div class="col s12 m5 center-align" style="padding: 10px;">
+                <img src="img/andromeda.png" alt="Andromeda" class="responsive-img materialboxed">
+                <h2 class="indigo-text text-darken-2">
+                    <a href="galaxies.html?name=Andromeda" target="_blank">ANDROMEDA</a>
+                </h2>
+                <p>Andromeda (M31) is the largest galaxy in the Local Group of galaxies, which includes the Milky Way, the Triangulum Galaxy, and about 54 other smaller galaxies. </p>
+                <p>It's located about 2.5 million light-years from Earth and is on a collision course with our galaxy!</p>
+            </div>
+        </div>
+    </section>
+
+     <!-- parallax -->
+     <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/star.jpg" alt="Star Image" onerror="this.onerror=null; this.src='fallback.jpg';" class="responsive-img">
+
+        </div>
+
+      </div>
+
+    <!-- about the universe -->
+    <section class="container section scrollspy" id="universe" style="padding-top: 20px;">
+        <li style="list-style-type: none;">
+            <h2>
+                <a href="universe.html" target="_blank">What is the Universe?</a>
+            </h2>
+        </li>
+        
+        <p>The universe encompasses all of space and time, as well as everything within it—planets, stars, galaxies, and the cosmic web that connects them all. It is vast, mysterious, and constantly expanding. Scientists estimate that the universe is around 13.8 billion years old and has grown from a singularity into the boundless space we observe today.</p>
+        <p>Earth and the Moon are part of the universe, as are the other planets and their many dozens of moons. Along with asteroids and comets, the planets orbit the Sun. The Sun is one among hundreds of billions of stars in the Milky Way galaxy, and most of those stars have their own planets, known as exoplanets. The universe is everything. It includes all of space, and all the matter and energy that space contains. It even includes time itself and, of course, it includes you.</p>
+    </section>
+
+    
+
+    <!-- galaxy type description -->
+    <section class="container section scrollspy" id="types" style="padding-top: 20px;">  
+        <li style="list-style-type: none;">
+            <h3 style="font-weight: bold;">
+                <a href="types.html" target="_blank">TYPES OF GALAXIES</a>
+            </h3>
+
+        </li>
+        
+        <div id="spiral" class="galaxy-type">
+            <h5>Spiral Galaxies</h5>
+            <p>Spiral galaxies have a flat, rotating disk of stars, gas, and dust, with a central concentration of stars known as the bulge. The Milky Way is a spiral galaxy.</p>
+        </div>
+
+        <div id="elliptical" class="galaxy-type">
+            <h5>Elliptical Galaxies</h5>
+            <p>Elliptical galaxies have a smooth, featureless light distribution, ranging from nearly spherical to more elongated shapes.</p>
+        </div>
+
+        <div id="dwarf" class="galaxy-type">
+            <h5>Dwarf Galaxies</h5>
+            <p>Dwarf galaxies are small galaxies with a much lower luminosity than larger galaxies like the Milky Way.</p>
+        </div>
+
+        <div id="irregular" class="galaxy-type">
+            <h5>Irregular Galaxies</h5>
+            <p>Irregular galaxies lack a clear shape and are often the result of collisions between galaxies.</p>
+        </div>
+
+        <div id="lenticular" class="galaxy-type">
+            <h5>Lenticular Galaxies</h5>
+            <p>Lenticular galaxies are disk-shaped like spiral galaxies but without the spiral arms.</p>
+        </div>
+
+        <div id="peculiar" class="galaxy-type">
+            <h5>Peculiar Galaxies</h5>
+            <p>Peculiar galaxies have unusual shapes often resulting from galactic interactions.</p>
+        </div>
+    </section>
+
+    <!-- parallax -->
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/star.jpg" alt="Star Image" onerror="this.onerror=null; this.src='fallback.jpg';" class="responsive-img">
+
+        </div>
+
+      </div>
+
+          <!-- stars description -->
+    <section class="container section scrollspy" id="stars" style="padding-top: 20px;">  
+        <li style="list-style-type: none;">
+            <h3 style="font-weight: bold;">
+                <a href="stars.html" target="_blank">FAMOUS STARS IN THE UNIVERSE</a>
+            </h3>
+
+        </li>
+        
+        <div id="spiral" class="galaxy-type">
+            <h5>1. Sirius (Alpha Canis Majoris)</h5>
+            <p>Sirius is the brightest star visible from Earth, with an apparent magnitude of -1.46, outshining all other stars.</p>
+        </div>
+
+        <div id="elliptical" class="galaxy-type">
+            <h5>2. Betelgeuse (Alpha Orionis)</h5>
+            <p>Betelgeuse is a red supergiant in the constellation Orion, making it one of the largest visible stars in the night sky. Its size is so immense that if it replaced the Sun, its outer layers would extend beyond the orbit of Jupiter.</p>
+        </div>
+
+        <div id="dwarf" class="galaxy-type">
+            <h5>3. Rigel (Beta Orionis)</h5>
+            <p>Rigel is about 21 times more massive than the Sun and shines approximately 120,000 times brighter than the Sun in visible light. Including all wavelengths, its luminosity is about 500,000 times greater than the Sun.</p>
+        </div>
+
+        <div id="irregular" class="galaxy-type">
+            <h5>4. Polaris (Alpha Ursae Minoris)</h5>
+            <p>Polaris is a yellow supergiant. It is about 6 times the mass of the Sun and has a diameter around 46 times larger than the Sun. Its size is large enough that if it were placed at the center of our solar system, it would extend beyond the orbit of Mars.</p>
+        </div>
+
+        <div id="lenticular" class="galaxy-type">
+            <h5>5. Alpha Centauri A and B (Alpha Centauri System)</h5>
+            <p>Both Alpha Centauri A and B are considered prime targets for the search for exoplanets. In fact, astronomers have discovered Proxima b, an exoplanet in the habitable zone of Proxima Centauri, which may have conditions suitable for life.</p>
+        </div>
+
+        <div id="peculiar" class="galaxy-type">
+            <h5>6. The Sun</h5>
+            <p>The Sun is huge! It accounts for 99.86% of the total mass of our entire solar system. Its diameter is about 1.39 million kilometers (860,000 miles), making it roughly 109 times wider than Earth.</p>
+        </div>
+    </section>
+
+
+<!-- contact -->
+<section class="container section scrollspy" id="contact">
+    <h2>CONTACT US</h2>
+    <p>If you'd like to get in touch or ask some questions about galaxies and universe, feel free to reach out to us!</p>
+
+    <form action="">
+        <div class="input-field">
+            <input type="text" id="name" required>
+            <label for="name">Full Name</label>
+        </div>
+
+        <div class="input-field">
+            <input type="email" id="email" required>
+            <label for="email">Email Address</label>
+        </div>
+
+        <div class="input-field">
+            <textarea id="message" class="materialize-textarea" required></textarea>
+            <label for="message">Your Message</label>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+
+<!-- footer -->
+<footer class="page-footer indigo darken-4">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 l4">
+                <h5 class="white-text">The Universe</h5>
+                <p class="grey-text text-lighten-4">Explore the universe with us! From galaxies to stars, we bring you the latest on the vast wonders of space.</p>
+            </div>
+            <div class="col s12 l4">
+                <h5 class="white-text">Quick Links</h5>
+                <ul>
+                    <li><a href="#galaxies" class="grey-text text-lighten-3">Galaxies</a></li>
+                    <li><a href="#universe" class="grey-text text-lighten-3">Universe</a></li>
+                    <li><a href="#types" class="grey-text text-lighten-3">Types</a></li>
+                    <li><a href="stars" class="grey-text text-lighten-3">Stars</a></li>
+                    <li><a href="#contact" class="grey-text text-lighten-3">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col s12 l4">
+                <h5 class="white-text">Connect With Us</h5>
+                <ul>
+                    <li><a href="#" class="grey-text text-lighten-3">Facebook</a></li>
+                    <li><a href="#" class="grey-text text-lighten-3">Twitter</a></li>
+                    <li><a href="#" class="grey-text text-lighten-3">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2024 The Universe. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.sidenav').sidenav();
+        $('.materialboxed').materialbox();
+        $('.parallax').parallax(); 
+        $('.tabs').tabs();
+        $('.tooltipped').tooltip();
+        $('.scrollspy').scrollSpy();
+    });
+</script>
+
+</body>
+</html>
