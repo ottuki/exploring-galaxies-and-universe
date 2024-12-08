@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Galaxies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            background-color: #121212;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: url('img/universe2.jpg') no-repeat center center/cover;
+            background-size: cover;
+            height: 50vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.8);
+            font-weight: bold;
+            margin: 0;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #55b7f8;
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+
+        
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        .back-button button {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-button button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        footer {
+            background-color: #1a237e;
+            text-align: center;
+            padding: 10px 0;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back button -->
+    <div class="back-button">
+        <button onclick="goBack()">
+            <span class="material-icons">arrow_back</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>TYPES OF GALAXIES</h1>
+    </header>
+
+    <!-- Galaxy Type Information -->
+    <section class="container section scrollspy" id="galaxy-types">
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="img/spiral.png" alt="Spiral Galaxy" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h2>Spiral Galaxies</h2>
+                <p>Spiral galaxies are some of the most visually striking and commonly observed types of galaxies in the universe. They are characterized by their distinctive spiral structures, which consist of arms that extend outward from a central bulge. These arms are sites of active star formation, making them rich in young, hot stars.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 l4 push-l7 offset-l1">
+                <img src="img/elliptical.png" alt="Elliptical Galaxy" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 pull-l4 right-align">
+                <h2>Elliptical Galaxies</h2>
+                <p>Elliptical galaxies have a smooth, featureless light distribution and are composed mostly of older stars. Examples include M87 and M49 in the Virgo Cluster. This kind of galaxies have a smooth, featureless, and ellipsoidal shape, unlike the structured arms of spiral galaxies. They are among the oldest and largest galaxies in the universe, consisting primarily of older stars with little gas or dust to fuel new star formation.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="img/dwarf.png" alt="Dwarf Galaxy" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h2>Dwarf Galaxies</h2>
+                <p>Dwarf galaxies are small, low-mass galaxies that contain fewer stars compared to larger galaxies like spirals or ellipticals. Despite their size, they play a crucial role in the structure and evolution of the universe. They are often considered the building blocks of larger galaxies and provide insights into dark matter and galaxy formation.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 l4 push-l7 offset-l1">
+                <img src="img/irregular.png" alt="Irregular Galaxy" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 pull-l4 right-align">
+                <h2>Irregular Galaxies</h2>
+                <p>Irregular galaxies are a type of galaxy that lacks a defined shape or structure, unlike spiral or elliptical galaxies. Their chaotic appearance often results from gravitational interactions, collisions, or internal processes that disrupt their original form. Despite their disorganized appearance, irregular galaxies are rich in gas and dust, making them active sites of star formation.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="img/lenticular.png" alt="Lenticular Galaxy" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h2>Lenticular Galaxies</h2>
+                <p>Lenticular galaxies are a type of galaxy that shares characteristics of both spiral and elliptical galaxies, making them a transitional galaxy type. They are denoted as S0 galaxies in the Hubble classification scheme. Lenticular galaxies are notable for their disk-like structure but lack prominent spiral arms, giving them a smooth, featureless appearance similar to elliptical galaxies.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 l4 push-l7 offset-l1">
+                <img src="img/peculiar.png" alt="Peculiar Galaxy" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 pull-l4 right-align">
+                <h2>Peculiar Galaxies</h2>
+                <p>Peculiar galaxies are a diverse group of galaxies that do not fit neatly into traditional categories such as spiral, elliptical, or lenticular galaxies. They exhibit unusual features or irregularities in their shape, structure, or behavior, often as a result of interactions with other galaxies, mergers, or internal processes. These galaxies are classified as peculiar because their morphology, star formation activity, or other characteristics deviate from the norm, making them stand out from the more typical galaxy types.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p> © 2024 The Universe. All rights reserved.</p>
+    </footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.materialboxed');
+            M.Materialbox.init(elems);
+        });
+
+        
+        function goBack() {
+            window.location.href = 'index.html'; 
+        }
+    </script>
+</body>
+</html>

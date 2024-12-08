@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Details</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow-y: scroll;
+            color: white;
+            text-align: center;
+            background-color: black;
+        }
+
+        #background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            filter: blur(10px);
+            z-index: -1;
+        }
+
+        #layout {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            min-height: 100vh;
+            position: relative;
+            z-index: 10;
+            padding-bottom: 120px; 
+        }
+
+        #galaxy-name {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            z-index: 10;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+
+        #galaxy-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        #galaxy-description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        #galaxy-video {
+            margin-top: 20px;
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+        }
+
+       
+.back-button {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    z-index: 100; 
+}
+
+.back-button button {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.back-button button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+        
+        footer {
+            background-color: #283593;
+            color: white;
+            padding: 40px 0;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            margin-top: auto;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        footer h5 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        footer .grey-text {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        footer .grey-text a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+        }
+
+        footer .grey-text a:hover {
+            color: #ffca28;
+        }
+
+        footer .footer-copyright {
+            background-color: #1a237e;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+   <!-- Back button -->
+<div class="back-button">
+    <button onclick="goBack()">
+        <span class="material-icons">arrow_back</span>
+    </button>
+</div>
+
+
+    <!-- Galaxy details -->
+    <div id="background"></div>
+    <div id="layout">
+        <h1 id="galaxy-name"></h1>
+        <img id="galaxy-image" src="" alt="Galaxy Image">
+        <p id="galaxy-description"></p>
+
+        <div id="galaxy-video"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2024 The Universe. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+         function goBack() {
+        
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            window.location.href = "index.html";
+        }
+    }
+        
+        const galaxies = {
+            "Messier51": {
+                name: "Whirlpool Galaxy (M51)",
+                image: "img/whirlpool.png",
+                description: "The Whirlpool Galaxy, also known as Messier 51 (M51), is a stunning spiral galaxy located about 23 million light-years away in the constellation Canes Venatici. It is one of the most well-known and studied galaxies due to its clear and beautifully defined spiral structure, making it a favorite among astronomers and astrophotographers.",
+                video: "https://www.youtube.com/embed/HBhqr0KkntQ"
+            },
+            "MilkyWay": {
+                name: "Milky Way Galaxy",
+                image: "img/milky.png",
+                description: "The Milky Way is the name of the galaxy that contains our Solar System. The term originates from its appearance: a faint, milky band of light stretching across the night sky, composed of countless stars that are too distant to be seen individually.",
+                video: "https://www.youtube.com/embed/zXoUdSiscXw"
+            },
+            "IC1101": {
+                name: "IC 1101",
+                image: "img/ic.png",
+                description: "IC 1101 serves as an example of how massive and diverse galaxies can become in the vastness of the universe. Its extreme size and brightness make it a key object of study for understanding galaxy evolution and the dynamics of galaxy clusters.",
+                video: "https://www.youtube.com/embed/CObbHKRwG6E"
+            },
+            "Messier87": {
+                name: "Messier 87 (M87)",
+                image: "img/mess87.png",
+                description: "Messier 87 (M87) is a massive elliptical galaxy located in the Virgo Cluster of galaxies, about 53 million light-years away in the constellation Virgo. It is one of the most studied galaxies due to its size, features, and the supermassive black hole at its center.",
+                video: "https://www.youtube.com/embed/-22Gv-20LuM"
+            },
+            "Andromeda": {
+                name: "Andromeda Galaxy",
+                image: "img/andromeda.png",
+                description: "Andromeda, also known as Messier 31 (M31), is a spiral galaxy located about 2.5 million light years away. It is thought that the Milky Way and Andromeda will collide several billion years from now. The black holes located in both galaxies will then reside in the large, elliptical galaxy that results from this merger.",
+                video: "https://www.youtube.com/embed/TijClV4uHIk"
+            },
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const galaxyKey = params.get('name');
+        const galaxy = galaxies[galaxyKey];
+
+        if (galaxy) {
+            document.getElementById('galaxy-name').textContent = galaxy.name;
+            document.getElementById('galaxy-image').src = galaxy.image;
+            document.getElementById('galaxy-image').alt = galaxy.name;
+            document.getElementById('galaxy-description').textContent = galaxy.description;
+
+            document.getElementById('background').style.backgroundImage = `url('${galaxy.image}')`;
+
+            if (galaxy.video) {
+                document.getElementById('galaxy-video').innerHTML = `<iframe width="100%" height="300" src="${galaxy.video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            }
+        } else {
+            document.getElementById('layout').innerHTML = "<h1>Galaxy Not Found</h1>";
+        }
+    </script>
+</body>
+</html>

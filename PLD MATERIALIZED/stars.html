@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stars in the Universe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            background-color: #121212;
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: url('img/stars2.jpg') no-repeat center center/cover;
+            background-size: cover;
+            height: 50vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.8);
+            font-weight: bold;
+            margin: 0;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #55b7f8;
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+
+        
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        .back-button button {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-button button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        footer {
+            background-color: #1a237e;
+            text-align: center;
+            padding: 10px 0;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back button -->
+    <div class="back-button">
+        <button onclick="goBack()">
+            <span class="material-icons">arrow_back</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>STARS IN THE UNIVERSE</h1>
+    </header>
+
+    <!-- stars Information -->
+    <section class="container section scrollspy" id="galaxy-types">
+        
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="img/sirius.png" alt="Spiral Galaxy" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h2>1. Sirius (Alpha Canis Majoris)</h2>
+                <p>Sirius, often referred to as the Dog Star, is the brightest star in the night sky and is part of the constellation Canis Major (the Greater Dog). Its name comes from the Greek word "Seirios," meaning "glowing" or "scorching," which reflects its brilliance in the heavens.</p>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col s12 l4 push-l7 offset-l1">
+                <img src="img/betelgeuse.png" alt="Elliptical Galaxy" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 pull-l4 right-align">
+                <h2>2. Betelgeuse (Alpha Orionis)</h2>
+                <p>Betelgeuse is one of the most famous stars in the night sky, known for its bright reddish hue and its location in the constellation Orion, where it marks the hunter's left shoulder. Its name comes from the Arabic phrase "Yad al-Jauza," meaning "the hand of Orion," though its spelling and pronunciation have evolved over time.</p>
+            </div>
+        </div>
+
+        <!-- Dwarf Galaxies -->
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="img/rigel.png" alt="Dwarf Galaxy" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h2>3. Rigel (Beta Orionis)</h2>
+                <p>Rigel is one of the most luminous and well-known stars in the night sky. Located in the constellation Orion, Rigel marks the hunter's left foot and is the brightest star in the constellation despite being designated as Beta Orionis (a naming convention anomaly).</p>
+            </div>
+        </div>
+
+        <!-- Irregular Galaxies -->
+        <div class="row">
+            <div class="col s12 l4 push-l7 offset-l1">
+                <img src="img/polaris.png" alt="Irregular Galaxy" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 pull-l4 right-align">
+                <h2>4. Polaris (Alpha Ursae Minoris)</h2>
+                <p>Polaris, commonly known as the North Star, is one of the most important stars in the night sky due to its near alignment with Earth's North Celestial Pole. It is part of the constellation Ursa Minor (the Little Bear) and is located at the end of the handle of the Little Dipper asterism.</p>
+            </div>
+        </div>
+
+        <!-- Lenticular Galaxies -->
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="img/alpha.png" alt="Lenticular Galaxy" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h2>5. Alpha Centauri A and B (Alpha Centauri System)</h2>
+                <p>The Alpha Centauri System is the closest star system to Earth, located in the southern constellation Centaurus. It consists of three main stars: Alpha Centauri A, Alpha Centauri B, and Proxima Centauri, the latter being the closest known star to our solar system.</p>
+            </div>
+        </div>
+
+        <!-- Peculiar Galaxies -->
+        <div class="row">
+            <div class="col s12 l4 push-l7 offset-l1">
+                <img src="img/sun.png" alt="Peculiar Galaxy" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 pull-l4 right-align">
+                <h2>6. The Sun</h2>
+                <p>The Sun is the central star of the solar system and the primary source of energy for life on Earth. It is a main-sequence star of spectral type G2V, often referred to as a yellow dwarf, though its light appears white from space.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p> © 2024 The Universe. All rights reserved.</p>
+    </footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.materialboxed');
+            M.Materialbox.init(elems);
+        });
+
+       
+        function goBack() {
+            window.location.href = 'index.html'; 
+        }
+    </script>
+</body>
+</html>

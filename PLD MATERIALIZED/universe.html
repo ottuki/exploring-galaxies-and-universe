@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material Icons -->
+    <title>The Universe</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: url('img/universe2.jpg') no-repeat center center/cover;
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.8);
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .back-btn i {
+            color: white;
+            font-size: 30px;
+        }
+
+        section {
+            padding: 40px 20px;
+        }
+
+        section h3 {
+            color: #55b7f8;
+            font-size: 2.5rem;
+        }
+
+        .container p {
+            line-height: 1.8;
+            font-size: 1.5rem;
+        }
+
+        
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+
+.column {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
+.column-image {
+    flex: 0 0 40%; 
+    max-width: 40%; 
+}
+
+.column-image img {
+    width: 100%;
+    border-radius: 8px; 
+}
+
+
+.column-text {
+    flex: 0 0 55%;
+    max-width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.column-text h3 {
+    color: #55b7f8;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.column-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .column {
+        flex: 0 0 100%; 
+        max-width: 100%;
+    }
+
+    .column-text {
+        margin-top: 20px; 
+    }
+}
+
+
+        footer .footer-copyright {
+            background-color: #1a237e;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .back-btn i {
+                font-size: 24px;
+            }
+
+            section h3 {
+                font-size: 2rem;
+            }
+
+            .container p {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <button class="back-btn" onclick="goBack()">
+        <i class="material-icons">arrow_back</i>
+    </button>
+
+    <header>
+        <h1>DO YOU REALLY KNOW THE UNIVERSE?</h1>
+    </header>
+
+    <section class="container">
+        <h3>WHAT IS THE UNIVERSE?</h3>
+        <p>The universe encompasses all of space and time, as well as everything within it—planets, stars, galaxies, and the cosmic web that connects them all. It is vast, mysterious, and constantly expanding. Scientists estimate that the universe is around 13.8 billion years old and has grown from a singularity into the boundless space we observe today.</p>
+        <p>The universe contains all the energy and matter there is. Much of the observable matter in the universe takes the form of individual atoms of hydrogen, which is the simplest atomic element, made of only a proton and an electron (if the atom also contains a neutron, it is instead called deuterium). Two or more atoms sharing electrons is a molecule. Many trillions of atoms together is a dust particle. Smoosh a few tons of carbon, silica, oxygen, ice, and some metals together, and you have an asteroid. Or collect 333,000 Earth masses of hydrogen and helium together, and you have a Sun-like star.</p>
+           
+        <div class="row">
+            
+            <div class="column column-image">
+                <img src="img/earth.jpg" alt="Earth" class="responsive-img">
+            </div>
+
+            <div class="column column-text">
+            
+                <h3 class="indigo-text">HOW OLD IS THE EARTH?</h3>
+                <p>
+                    Our planet, Earth, is an oasis not only in space but in time. It may feel permanent, but the entire planet 
+                    is a fleeting thing in the lifespan of the universe. For nearly two-thirds of the time since the universe began, Earth did not even exist.
+                </p>
+                <p>
+                    Nor will it last forever in its current state. Several billion years from now, the Sun will expand, swallowing Mercury and Venus, and filling Earth’s sky. It might even expand large enough to swallow Earth itself. It’s difficult to be certain. After all, humans have only just begun deciphering the cosmos.
+                </p>
+                <p>
+                    While the distant future is difficult to accurately predict, the distant past is slightly less so. By studying the radioactive decay of isotopes on Earth and in asteroids, scientists have learned that our planet and the solar system formed around 4.6 billion years ago.
+                </p>
+
+                
+            
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="column column-text">
+                <h3 class="indigo-text">WHAT IS A BLACK HOLE?</h3>
+                <p>
+                    Black holes are among the most mysterious cosmic objects, much studied but not fully understood. 
+                    These objects aren't really holes. They're huge concentrations of matter packed into very tiny spaces.
+                </p>
+                <p>
+                    A black hole is so dense that gravity just beneath its surface, the event horizon, is strong enough 
+                    that nothing – not even light – can escape. The event horizon isn't a surface like Earth's or even the Sun's. 
+                    It's a boundary that contains all the matter that makes up the black hole.
+                </p>
+                <p>
+                    There is much we don't know about black holes, like what matter looks like inside their event horizons. 
+                    However, there is a lot that scientists do know about black holes.
+                </p>
+            </div>
+            
+            <div class="column column-image">
+                <img src="img/blackhole.jpg" alt="Black Hole" class="responsive-img">
+            </div>
+        </div>
+        
+
+        <h3>FUN FACTS</h3>
+        <p> >If you could travel at the speed of light, it would take you over 100,000 years to cross just the Milky Way Galaxy, and the universe contains billions of such galaxies!</p>
+        <p> >Scientists estimate there are about 200 billion trillion stars (that's a 2 followed by 23 zeros), more than all the grains of sand on Earth.</p>
+        <p> >Most of the elements in your body, like carbon, oxygen, and nitrogen, were created inside stars that exploded billions of years ago.</p>
+    </section>
+
+     <!-- Footer -->
+     <footer>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2024 The Universe. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
